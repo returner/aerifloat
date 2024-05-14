@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+    <UserSecretsId>8f78dafe-738c-42da-9067-b90e947ed5d8</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="8.0.0-preview.7.24251.11" />
+    <!--<PackageReference Include="Aspire.Hosting.Orleans" Version="8.0.0-preview.7.24251.11" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <!--<ProjectReference Include="..\Abstractions\Abstractions.csproj" />-->
+    <ProjectReference Include="..\Endpoints\Endpoints.csproj" />
+    <ProjectReference Include="..\Silos\Silos.csproj" />
+  </ItemGroup>
+
+</Project>
