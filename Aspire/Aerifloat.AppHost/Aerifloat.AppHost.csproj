@@ -16,8 +16,8 @@
 
   <ItemGroup>
     <!--<ProjectReference Include="..\Abstractions\Abstractions.csproj" />-->
-    <ProjectReference Include="..\Endpoints\Endpoints.csproj" />
-    <ProjectReference Include="..\Silos\Silos.csproj" />
+    <ProjectReference Include="..\..\Aerifloat.Silo\Aerifloat.Silo.csproj" />
+    <ProjectReference Include="..\..\Endpoints\Endpoints.csproj" />
   </ItemGroup>
 
 </Project>

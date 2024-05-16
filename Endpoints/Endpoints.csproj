@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Abstractions\Abstractions.csproj" />
-    <ProjectReference Include="..\Aerifloat.ServiceDefaults\Aerifloat.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\Aerifloat.Grains.Abstractions\Aerifloat.Grains.Abstractions.csproj" />
+    <ProjectReference Include="..\Aspire\Aerifloat.ServiceDefaults\Aerifloat.ServiceDefaults.csproj" />
   </ItemGroup>
 
 </Project>
