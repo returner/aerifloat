@@ -1,0 +1,6 @@
+@Aerifloat.Api.Backend_HostAddress = http://localhost:5216
+
+GET {{Aerifloat.Api.Backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
