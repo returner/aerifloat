@@ -19,4 +19,8 @@
 	<ProjectReference Include="..\Aerifloat.Grains.Abstractions\Aerifloat.Grains.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Payloads\" />
+  </ItemGroup>
+
 </Project>
