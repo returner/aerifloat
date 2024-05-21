@@ -4,7 +4,7 @@ namespace Aerifloat.Api.Common.ServiceRegisters
 {
     public static class CorsRegisterServiceExtension
     {
-        public static void AddOperaCorsPolicy(this IServiceCollection services, IEnumerable<string> corsHosts)
+        public static void AddCorsPolicy(this IServiceCollection services, IEnumerable<string> corsHosts)
         {
             services.AddCors(opt =>
             {

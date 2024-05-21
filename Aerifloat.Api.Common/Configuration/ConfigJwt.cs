@@ -1,4 +1,4 @@
-﻿namespace Opera.ApplicationCore.Configuration;
+﻿namespace Aerifloat.Api.Common.Configuration;
 
 public class ConfigJwt
 {

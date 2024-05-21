@@ -1,6 +1,9 @@
-using Aerifloat.Grains.Abstractions;
+using MinimalApi.Endpoint.Extensions;
 using Orleans.Configuration;
-
+using System.Reflection;
+using Aerifloat.Api.Common.ServiceRegisters;
+using Aerifloat.Api.Common.Middlewares;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
@@ -17,10 +20,35 @@ builder.Host.UseOrleansClient(client =>
     .ConfigureLogging(logging => logging.AddConsole())
     .UseConsoleLifetime();
 
+builder.Host.UseDefaultServiceProvider(opt =>
+{
+    opt.ValidateScopes = true;
+    opt.ValidateOnBuild = true;
+});
+
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDefaultLogging();
+builder.Services.AddEndpoints();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGenService("Backend", new Version(1, 0, 0), Assembly.GetExecutingAssembly().GetName().Name);
+builder.Services.AddBoundedContext();
+builder.Services.AddCorsPolicy([string.Empty]);
+builder.Services.AddAntiforgery();
+
+//var configJwt = builder.Configuration.GetAppValue<ConfigJwt>("JwtValues") ?? throw new NullReferenceException();
+builder.Services.AddAuthorization();
+builder.Services.
+    AddAuthentication(o =>
+    {
+        o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    }).
+    AddJwtBearer(o =>
+    {
+        //o.TokenValidationParameters = TokenHelper.GetTokenValidationParameters(configJwt.Issuer!, configJwt.SecretKey!);
+    });
 
 var app = builder.Build();
 
@@ -33,25 +61,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseRouting();
+app.UseHttpLogging();
+app.UseAntiforgery();
 app.UseHttpsRedirection();
+//app.UseSerilogRequestLogging();
+app.UseMiddleware<ExceptionHandlerMiddleware>();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+app.UseAuthentication();
+app.UseAuthorization();
 
-app.MapGet("/sayhello", async (IClusterClient client) =>
-{
-    var friend = client.GetGrain<IHello>(0);
-    string response = await friend.SayHello();
-    return response;
-})
-.WithName("SayHello")
-.WithOpenApi();
+app.MapEndpoints();
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

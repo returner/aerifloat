@@ -1,5 +1,4 @@
-﻿using Aerifloat.Api.Common.Exceptions;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Aerifloat.Api.Common.Middlewares

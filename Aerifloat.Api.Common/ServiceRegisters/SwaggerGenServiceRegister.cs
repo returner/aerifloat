@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Aerifloat.Api.Common.Middlewares.Filters.Swagger;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using Opera.Infrastructure.Middlewares.Filters.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Aerifloat.Api.Common.ServiceRegisters;
@@ -30,12 +30,12 @@ public static class SwaggerGenServiceRegister
                     },
                 });
 
-                var description = $"This Document is for Web Services on Opera. Environment is \"<b>{envVal}</b>\"";
+                var description = $"This Document is for Web Services on Aerifloat. Environment is \"<b>{envVal}</b>\"";
 
                 options.SwaggerDoc($"v1", new OpenApiInfo
                 {
                     Version = $"v{apiVersion}",
-                    Title = $"Opera {title} API",
+                    Title = $"Aerifloat {title} API",
                     Description = description,
                 });
 

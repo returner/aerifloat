@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Opera.Infrastructure.Middlewares;
+namespace Aerifloat.Api.Common.Middlewares;
 
 public static class JwtTokenServiceExtensions
 {

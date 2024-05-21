@@ -7,12 +7,12 @@ namespace Aerifloat.Api.Common.ServiceRegisters
 {
     public static class DbContextRegister
     {
-        public static void AddOperaDbContext(this IServiceCollection services, string? connectionString, Version? version)
+        public static void AddAppDbContext(this IServiceCollection services, string? connectionString, Version? version)
         {
             // In Memory DB 사용할때
             if (connectionString!.Contains("InMemoryDb"))
             {
-                var dbName = "OperaApiTestDb";
+                var dbName = "AppApiTestDb";
 
                 var serviceProvider = new ServiceCollection()
                     .AddEntityFrameworkInMemoryDatabase()

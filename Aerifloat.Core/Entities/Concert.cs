@@ -6,7 +6,7 @@ namespace Aerifloat.Core.Entities;
 public class Concert : EntityBase<int>
 {
     private readonly IList<Performer> _performers = [];
-    private readonly IList<Act> _acts = new List<Act>();
+    private readonly IList<Act> _acts = [];
 
     public string Title { get; private set; }
     public IReadOnlyCollection<Performer> Performers => _performers.AsReadOnly();

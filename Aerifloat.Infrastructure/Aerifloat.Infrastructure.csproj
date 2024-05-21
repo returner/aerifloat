@@ -7,8 +7,6 @@
 	  <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 <ItemGroup>
-		<PackageReference Include="Ardalis.Specification" Version="8.0.0" />
-		<PackageReference Include="Ardalis.Specification.EntityFrameworkCore" Version="8.0.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0-preview.1.24081.2" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0-preview.1.24081.2">
 			<PrivateAssets>all</PrivateAssets>
@@ -16,9 +14,6 @@
 		</PackageReference>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.0-preview.1.24081.2" />
 	</ItemGroup>	
-  <ItemGroup>
-    <Folder Include="Specifications\Concert\" />
-  </ItemGroup>	
   <ItemGroup>
     <ProjectReference Include="..\Aerifloat.Core\Aerifloat.Core.csproj" />
   </ItemGroup>

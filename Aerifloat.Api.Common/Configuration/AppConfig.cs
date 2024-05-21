@@ -1,6 +1,4 @@
-﻿using Opera.ApplicationCore.Configuration;
-
-namespace Aerifloat.Api.Common.Configuration;
+﻿namespace Aerifloat.Api.Common.Configuration;
 
 public record AppConfig
 {
