@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34902.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endpoints", "Endpoints\Endpoints.csproj", "{8B7F544E-881E-4F12-B8C7-3841E91958B8}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aspire", "Aspire", "{DC9C774E-4088-46D7-9EF5-C969B7A6F93E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aerifloat.Silo", "Aerifloat.Silo\Aerifloat.Silo.csproj", "{64F60DE4-41B4-44F3-BF61-C2A9205353BD}"
@@ -37,16 +35,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aerifloat.Api.Common", "Aer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aerofloat.MediatRs", "Aerofloat.MediatRs\Aerofloat.MediatRs.csproj", "{5A62EB6A-90DF-4B81-B2E2-5BC7BBAA98DE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{E6CFBCE4-DAA0-4F0E-9834-56694F1C64D3}"
+	ProjectSection(SolutionItems) = preProject
+		SolutionItems\aspire-rollback-command.txt = SolutionItems\aspire-rollback-command.txt
+		SolutionItems\aspire-rollback.txt = SolutionItems\aspire-rollback.txt
+		SolutionItems\update-dev.ps1 = SolutionItems\update-dev.ps1
+		SolutionItems\update-ef-tool.ps1 = SolutionItems\update-ef-tool.ps1
+		SolutionItems\update-returner.ps1 = SolutionItems\update-returner.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8B7F544E-881E-4F12-B8C7-3841E91958B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B7F544E-881E-4F12-B8C7-3841E91958B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B7F544E-881E-4F12-B8C7-3841E91958B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B7F544E-881E-4F12-B8C7-3841E91958B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{64F60DE4-41B4-44F3-BF61-C2A9205353BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{64F60DE4-41B4-44F3-BF61-C2A9205353BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64F60DE4-41B4-44F3-BF61-C2A9205353BD}.Release|Any CPU.ActiveCfg = Release|Any CPU

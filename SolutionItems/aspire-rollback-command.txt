@@ -1,0 +1,8 @@
+https://github.com/dotnet/aspire/issues/3902
+#버전 되돌릴때
+
+# Run dotnet workload update command
+dotnet workload update --from-rollback-file .\aspire-rollback.txt
+
+# Run dotnet workload install command
+dotnet workload install aspire --from-rollback-file .\aspire-rollback.txt
