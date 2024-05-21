@@ -25,17 +25,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{E54A9D2D-C54
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orleans", "Orleans", "{2F419A16-D8B9-4A8E-ADDC-8AB1A734F012}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aerifloat.Grains.Core", "Aerifloat.Grains.Core\Aerifloat.Grains.Core.csproj", "{8A0033BF-A276-4155-804C-7A51A37B576D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aerifloat.Grains.Core", "Aerifloat.Grains.Core\Aerifloat.Grains.Core.csproj", "{8A0033BF-A276-4155-804C-7A51A37B576D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aerifloat.Core", "Aerifloat.Core\Aerifloat.Core.csproj", "{4AD26314-17E5-45AC-8DB9-D2DBEB10F6C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aerifloat.Core", "Aerifloat.Core\Aerifloat.Core.csproj", "{4AD26314-17E5-45AC-8DB9-D2DBEB10F6C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aerifloat.DTOs", "Aerifloat.DTOs\Aerifloat.DTOs.csproj", "{2683BE52-0443-40FA-9036-193700F418A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aerifloat.DTOs", "Aerifloat.DTOs\Aerifloat.DTOs.csproj", "{2683BE52-0443-40FA-9036-193700F418A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aerifloat.Infrastructure", "Aerifloat.Infrastructure\Aerifloat.Infrastructure.csproj", "{A15AD1F6-3F93-408C-8BB2-F4B1427F83C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aerifloat.Infrastructure", "Aerifloat.Infrastructure\Aerifloat.Infrastructure.csproj", "{A15AD1F6-3F93-408C-8BB2-F4B1427F83C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aerifloat.Api.Common", "Aerifloat.Api.Common\Aerifloat.Api.Common.csproj", "{720FA98B-E0C6-44F8-9264-13A453D7FB2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aerifloat.Api.Common", "Aerifloat.Api.Common\Aerifloat.Api.Common.csproj", "{720FA98B-E0C6-44F8-9264-13A453D7FB2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aerofloat.MediatRs", "Aerofloat.MediatRs\Aerofloat.MediatRs.csproj", "{5A62EB6A-90DF-4B81-B2E2-5BC7BBAA98DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aerofloat.MediatRs", "Aerofloat.MediatRs\Aerofloat.MediatRs.csproj", "{5A62EB6A-90DF-4B81-B2E2-5BC7BBAA98DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
