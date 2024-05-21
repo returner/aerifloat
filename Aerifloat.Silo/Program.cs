@@ -5,6 +5,10 @@ using Orleans.Configuration;
 IHostBuilder builder = Host.CreateDefaultBuilder(args)
     .UseOrleans(silo =>
     {
+        silo.UseDashboard(options => 
+        {
+            options.Port = 8123;
+        });
         silo.UseLocalhostClustering()
             .Configure<ClusterOptions>(options =>
             {
@@ -20,7 +24,6 @@ IHostBuilder builder = Host.CreateDefaultBuilder(args)
     .UseConsoleLifetime();
 
 using IHost host = builder.Build();
-
 
 await host.RunAsync();
 
