@@ -5,6 +5,8 @@ using Aerifloat.Api.Common.ServiceRegisters;
 using Aerifloat.Api.Common.Middlewares;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Serilog;
+using MinimalApi.Endpoint;
+using Aerifloat.Api.Endpoints.Concerts;
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -40,7 +42,17 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDefaultLogging();
 builder.Services.AddEndpoints();
-builder.Services.AddEndpointsApiExplorer();
+
+var ss = typeof(ConcertsEndpointMarker).Assembly.DefinedTypes.Where(t => t.GetInterfaces().Contains(typeof(IEndpoint))).Where(t => !t.IsInterface);
+var endpoints = AppDomain.CurrentDomain.GetAssemblies()
+                .SelectMany(s => s.GetTypes())
+                .Where(t => t.GetInterfaces().Contains(typeof(IEndpoint)))
+                .Where(t => !t.IsInterface);
+//foreach (var endpoint in ss)
+//{
+//    builder.Services.AddScoped(typeof(IEndpoint), endpoint);
+//}
+
 builder.Services.AddSwaggerGenService("Backend", new Version(1, 0, 0), Assembly.GetExecutingAssembly().GetName().Name);
 
 builder.Services.AddCorsPolicy([string.Empty]);

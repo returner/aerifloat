@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="MinimalApi.Endpoint" Version="1.3.0" />
+		<PackageReference Include="Microsoft.Orleans.Client" Version="8.1.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Aerifloat.Api.Common\Aerifloat.Api.Common.csproj" />
+	  <ProjectReference Include="..\Aerifloat.Grains.Abstractions\Aerifloat.Grains.Abstractions.csproj" />
+	  <ProjectReference Include="..\Aerifloat.Grains.Dtos\Aerifloat.Grains.Dtos.csproj" />
+	</ItemGroup>
+</Project>

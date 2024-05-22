@@ -13,9 +13,6 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.0-preview.1.24081.2" />
-	</ItemGroup>	
-  <ItemGroup>
-    <ProjectReference Include="..\Aerifloat.Core\Aerifloat.Core.csproj" />
-  </ItemGroup>
+	</ItemGroup>
 
 </Project>

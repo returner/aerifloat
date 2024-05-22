@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Aerifloat.DTOs\Aerifloat.DTOs.csproj" />
-    <ProjectReference Include="..\Aerifloat.Infrastructure\Aerifloat.Infrastructure.csproj" />
+    <ProjectReference Include="..\Aerifloat.MediatRs.Dtos\Aerifloat.MediatRs.Dtos.csproj" />
+    <ProjectReference Include="..\Aerifloat.Repositories\Aerifloat.Repositories.csproj" />
   </ItemGroup>
 
   <ItemGroup>

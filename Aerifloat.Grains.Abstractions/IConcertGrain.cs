@@ -1,4 +1,4 @@
-﻿using Aerifloat.DTOs.Concerts;
+﻿using Aerifloat.Grains.Dtos.Grains.Concerts;
 
 namespace Aerifloat.Grains.Abstractions
 {

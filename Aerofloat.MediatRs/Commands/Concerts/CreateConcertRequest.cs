@@ -1,21 +1,11 @@
-﻿using Aerifloat.Core.Entities;
-using Aerifloat.Core.Repositories;
+﻿using Aerifloat.DTOs.Context.Concerts;
+using Aerifloat.Repositories.Entities;
+using Aerifloat.Repositories.Repositories;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aerofloat.MediatRs.Commands.Concerts
 {
-    public record CreateConcertRequest : IRequest<int>
-    {
-        public required string Title { get; set; }
-        public string? Description { get; set; }
-        public required DateTime StartAt { get; set; }
-        public required DateTime EndAt { get; set; }
-    }
+    
 
     public class CreateConcertRequestHandler : IRequestHandler<CreateConcertRequest, int>
     {

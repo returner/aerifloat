@@ -1,6 +1,5 @@
-﻿using Aerifloat.Core.Repositories;
-using Aerifloat.Infrastructure.BoundedContext;
-using Aerifloat.Infrastructure.Repositories;
+﻿using Aerifloat.Repositories.BoundedContext;
+using Aerifloat.Repositories.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Aerifloat.Silo;

@@ -1,6 +1,6 @@
-﻿using Aerifloat.DTOs.Concerts;
+﻿using Aerifloat.DTOs.Context.Concerts;
 using Aerifloat.Grains.Abstractions;
-using Aerofloat.MediatRs.Commands.Concerts;
+using Aerifloat.Grains.Dtos.Grains.Concerts;
 using MediatR;
 
 namespace Aerifloat.Grains

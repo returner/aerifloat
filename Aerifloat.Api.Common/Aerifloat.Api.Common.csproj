@@ -6,9 +6,6 @@
 	  <Nullable>enable</Nullable>
 	  <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\Aerifloat.Infrastructure\Aerifloat.Infrastructure.csproj" />
-	</ItemGroup>
   <ItemGroup>
 	  <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
 	  <PackageReference Include="Serilog.Sinks.Http" Version="9.0.0" />

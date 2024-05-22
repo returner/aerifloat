@@ -16,7 +16,7 @@ IHostBuilder builder = Host.CreateDefaultBuilder(args)
         .ConfigureServices(services => 
         { 
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<MediatorRegister>());
-            services.AddAppDbContext("server=localhost;user=platform_user;password=platform_user!;port=3306;database=Opera;", new Version(8,0,33));
+            services.AddAppDbContext("server=localhost;user=server_user;password=123456!;port=3306;database=aerifloat;", new Version(8,0,33));
             services.AddBoundedContext();
         })
             .Configure<ClusterOptions>(options =>

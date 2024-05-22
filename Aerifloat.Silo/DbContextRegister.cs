@@ -1,4 +1,4 @@
-﻿using Aerifloat.Infrastructure.Context;
+﻿using Aerifloat.Repositories.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.DependencyInjection;

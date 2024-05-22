@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Aerifloat.Api.Common\Aerifloat.Api.Common.csproj" />
+    <ProjectReference Include="..\Aerifloat.Api.Endpoints.Concerts\Aerifloat.Api.Endpoints.Concerts.csproj" />
     <ProjectReference Include="..\Aspire\Aerifloat.ServiceDefaults\Aerifloat.ServiceDefaults.csproj" />
 	<ProjectReference Include="..\Aerifloat.Grains.Abstractions\Aerifloat.Grains.Abstractions.csproj" />
   </ItemGroup>
