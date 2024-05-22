@@ -10,6 +10,7 @@
         EmptyCollection,
         DateTimeOutOfRange,
         EndDateBiggerThanStartDate,
-        InvalidFileNameOrExtension
+        InvalidFileNameOrExtension,
+        Success
     }
 }

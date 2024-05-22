@@ -28,4 +28,14 @@ public class Act : EntityBase<long>
         StartTime = startTime;
         EndTime = endTime;
     }
+
+    public void AddSessions(IEnumerable<Session> sessions)
+    {
+        ArgumentNullException.ThrowIfNull(sessions);
+
+        foreach (var session in sessions)
+        {
+            _session.Add(session);
+        }
+    }
 }
