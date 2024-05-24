@@ -13,7 +13,7 @@
         public async Task<int> HandleAsync([FromServices] IClusterClient clusterClient, [FromBody] CreateConcertPayload request, CancellationToken cancellationToken)
         {
             var grain = clusterClient.GetGrain<IConcertGrain>(0);
-            var dto = new CreateConcertDto
+            var dto = new GrainCreateConcertDto
             {
                 Title = request.Title,
                 Description = request.Description,

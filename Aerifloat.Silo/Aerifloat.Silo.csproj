@@ -11,15 +11,16 @@
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0-preview.3.24172.9" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.0-preview.3.24172.9" />
 		<PackageReference Include="Microsoft.Orleans.Server" Version="8.1.0" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.0-preview.1" />
 		<PackageReference Include="OrleansDashboard" Version="8.0.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0-preview.1.24081.2" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0-preview.1.24081.2">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0-preview.1" />
 	</ItemGroup>
 	<ItemGroup>
+	  <ProjectReference Include="..\Aerifloat.Domain\Aerifloat.Domain.csproj" />
 	  <ProjectReference Include="..\Aspire\Aerifloat.ServiceDefaults\Aerifloat.ServiceDefaults.csproj" />
 	  <ProjectReference Include="..\Grains\Aerifloat.Grains\Aerifloat.Grains.csproj" />
 	</ItemGroup>

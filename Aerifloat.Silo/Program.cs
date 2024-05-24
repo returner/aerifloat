@@ -1,5 +1,4 @@
 ﻿using Aerifloat.Silo;
-using Aerofloat.MediatRs;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -15,8 +14,7 @@ IHostBuilder builder = Host.CreateDefaultBuilder(args)
         silo.UseLocalhostClustering()
         .ConfigureServices(services => 
         { 
-            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<MediatorRegister>());
-            services.AddAppDbContext("server=localhost;user=server_user;password=123456!;port=3306;database=aerifloat;", new Version(8,0,33));
+            services.AddAppDbContext("Host=localhost;Database=aerifloat;Username=dev;Password=1234");
             services.AddBoundedContext();
         })
             .Configure<ClusterOptions>(options =>
@@ -35,4 +33,3 @@ IHostBuilder builder = Host.CreateDefaultBuilder(args)
 using IHost host = builder.Build();
 
 await host.RunAsync();
-

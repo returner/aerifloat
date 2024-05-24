@@ -6,8 +6,10 @@
     <Nullable>enable</Nullable>
 	  <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="Ardalis.Specification" Version="8.0.0" />
-		<PackageReference Include="Ardalis.Specification.EntityFrameworkCore" Version="8.0.0" />
-	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aerifloat.Domain.DTOs\Aerifloat.Domain.DTOs.csproj" />
+    <ProjectReference Include="..\Aerifloat.Entities\Aerifloat.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

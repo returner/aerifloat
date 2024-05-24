@@ -12,9 +12,8 @@
 		<PackageReference Include="Microsoft.Orleans.Sdk" Version="8.1.0" />
 	</ItemGroup>
 	<ItemGroup>
+		<ProjectReference Include="..\..\Aerifloat.Domain\Aerifloat.Domain.csproj" />
 		<ProjectReference Include="..\..\Aerifloat.Grains.Abstractions\Aerifloat.Grains.Abstractions.csproj" />
-		<ProjectReference Include="..\..\Aerifloat.MediatRs.Dtos\Aerifloat.MediatRs.Dtos.csproj" />
-		<ProjectReference Include="..\..\Aerofloat.MediatRs\Aerofloat.MediatRs.csproj" />
 		<ProjectReference Include="..\..\Aspire\Aerifloat.ServiceDefaults\Aerifloat.ServiceDefaults.csproj" />
 	</ItemGroup>
 </Project>

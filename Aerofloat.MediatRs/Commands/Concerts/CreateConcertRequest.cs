@@ -18,11 +18,7 @@ namespace Aerofloat.MediatRs.Commands.Concerts
 
         public async Task<int> Handle(CreateConcertRequest request, CancellationToken cancellationToken = default)
         {
-            var concert = new Concert(request.Title, request.Description, request.StartAt, request.EndAt);
-            await _repository.AddAsync(concert, cancellationToken);
-            await _repository.SaveChangesAsync(cancellationToken);
-
-            return concert.Id;
+            
         }
     }
 }
