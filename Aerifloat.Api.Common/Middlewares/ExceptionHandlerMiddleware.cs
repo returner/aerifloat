@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using System.Net;
 
 namespace Aerifloat.Api.Common.Middlewares
 {
@@ -34,7 +35,7 @@ namespace Aerifloat.Api.Common.Middlewares
         async Task HandleCancel(HttpContext httpContext, Exception ex)
         {
             //Log.Canceled(_logger, httpContext.GetEndpoint()?.DisplayName);
-            httpContext.Response.StatusCode = 409;
+            httpContext.Response.StatusCode = (int)HttpStatusCode.Conflict;
             await Task.CompletedTask;
         }
 
@@ -48,7 +49,9 @@ namespace Aerifloat.Api.Common.Middlewares
             //};
 
             //await httpContext.Response.WriteAsJsonAsync(response);
-            await Task.CompletedTask;
+            httpContext.Response.ContentType = DefaultResponseContentType;
+            httpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+            await httpContext.Response.WriteAsync(exception.Message);
         }
 
         //private ApiErrorResponse<string> ParameterExceptionHandler(ErrorCode errorCode, string? paramName)
